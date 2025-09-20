@@ -1,7 +1,7 @@
-import { TerminalScanner } from "@/components/TerminalScanner";
+import { SecurityDashboard } from "@/components/SecurityDashboard";
 
 const Index = () => {
-  return <TerminalScanner />;
+  return <SecurityDashboard />;
 };
 
 export default Index;
