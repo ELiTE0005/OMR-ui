@@ -47,6 +47,15 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        terminal: {
+          bg: "hsl(var(--terminal-bg))",
+          text: "hsl(var(--terminal-text))",
+          cursor: "hsl(var(--terminal-cursor))",
+          scan: "hsl(var(--terminal-scan))",
+          warning: "hsl(var(--terminal-warning))",
+          error: "hsl(var(--terminal-error))",
+          success: "hsl(var(--terminal-success))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -65,25 +74,42 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        blink: {
+          "0%, 50%": { opacity: "1" },
+          "51%, 100%": { opacity: "0" },
+        },
+        typewriter: {
+          from: { width: "0" },
+          to: { width: "100%" },
+        },
+        "scan-line": {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(100vw)" },
+        },
+        "glow-pulse": {
+          "0%, 100%": { textShadow: "0 0 10px currentColor" },
+          "50%": { textShadow: "0 0 20px currentColor, 0 0 30px currentColor" },
+        },
+        "matrix-rain": {
+          "0%": { transform: "translateY(-100%)", opacity: "1" },
+          "100%": { transform: "translateY(100vh)", opacity: "0" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        blink: "blink 1s infinite",
+        typewriter: "typewriter 2s steps(20) forwards",
+        "scan-line": "scan-line 2s linear infinite",
+        "glow-pulse": "glow-pulse 2s ease-in-out infinite",
+        "matrix-rain": "matrix-rain 3s linear infinite",
       },
     },
   },
